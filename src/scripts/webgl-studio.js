@@ -69,7 +69,7 @@ export function initWebGLStudio() {
 
     // Clean subtle card border frame
     const wireGeo = new THREE.EdgesGeometry(geometry);
-    const wireMat = new THREE.LineBasicMaterial({ color: 0x444444, linewidth: 1, transparent: true, opacity: 0.4 });
+    const wireMat = new THREE.LineBasicMaterial({ color: 0x8000ff, linewidth: 1 });
     const wireframe = new THREE.LineSegments(wireGeo, wireMat);
     mesh.add(wireframe);
 
@@ -89,10 +89,10 @@ export function initWebGLStudio() {
     pPositions[i * 3 + 1] = (Math.random() - 0.5) * 16;
     pPositions[i * 3 + 2] = (Math.random() - 0.5) * 14 - 2;
 
-    const gray = 0.4 + Math.random() * 0.5;
-    pColors[i * 3] = gray;
-    pColors[i * 3 + 1] = gray;
-    pColors[i * 3 + 2] = gray;
+    const isPurple = Math.random() > 0.5;
+    pColors[i * 3] = isPurple ? 0.5 : 0.9;
+    pColors[i * 3 + 1] = isPurple ? 0.0 : 0.9;
+    pColors[i * 3 + 2] = isPurple ? 1.0 : 0.9;
   }
 
   particleGeo.setAttribute('position', new THREE.BufferAttribute(pPositions, 3));
@@ -103,7 +103,7 @@ export function initWebGLStudio() {
     vertexColors: true,
     transparent: true,
     opacity: 0.7,
-    blending: THREE.AdditiveBlending
+    blending: THREE.NormalBlending
   });
 
   const particleMesh = new THREE.Points(particleGeo, particleMat);
@@ -227,5 +227,6 @@ export function initWebGLStudio() {
 
   animate();
 }
+
 
 
