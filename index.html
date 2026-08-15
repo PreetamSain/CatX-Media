@@ -1,38 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" class="is-smooth is-desktop">
+<html lang="en" class="is-smooth is-desktop" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#8000FF">
-  <meta name="description" content="CATX Media &mdash; Brand identities, digital products, 3D CGI motion, and high-performance visual systems since 2018.">
+  <meta name="description" content="CATX Media &mdash; High-End Brand Identities, 3D CGI Motion, Packaging Architecture & Digital Products.">
   <meta name="robots" content="index, follow">
   
-  <meta property="og:title" content="CATX Media &mdash; Brand & Digital Design Studio">
+  <meta property="og:title" content="CATX Media &mdash; Professional Graphic Design & Motion Studio">
   <meta property="og:description" content="Crafting visual culture through high-impact brand identities, UI/UX platforms, and 3D motion experiences.">
   <meta property="og:image" content="/images/catx-logo.png">
   <meta property="og:type" content="website">
   
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:creator" content="@catx.media">
-  <meta name="twitter:title" content="CATX Media &mdash; Brand & Digital Design Studio">
-  <meta name="twitter:description" content="Brand & Digital Design Studio &bull; Jaipur, India.">
+  <meta name="twitter:title" content="CATX Media &mdash; Graphic Design & Motion Studio">
+  <meta name="twitter:description" content="Brand &amp; Digital Design Studio &bull; Jaipur, India.">
   <meta name="twitter:image:src" content="/images/catx-logo.png">
   
-  <title>CATX Media &mdash; Brand & Digital Design Studio</title>
+  <title>CATX Media &mdash; Graphic Design &amp; 3D Motion Studio</title>
   
   <link rel="icon" type="image/png" href="/images/catx-logo.png">
   <link rel="apple-touch-icon" href="/images/catx-logo.png">
 </head>
 <body>
 
-  
-  </div>
-
   <!-- Dynamic Project Tooltip Pill (K95 Style attached to Cursor) -->
   <div class="project-label" data-nosnippet>
     <div class="project-label__pill project-label__pill--project">
       <svg class="project-label__arrow" width="12" height="12" viewBox="0 0 12 12" fill="none">
-        <path d="M2 10L10 2M10 2H4M10 2V8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       <div class="project-label__text">
         <span class="project-label__title">Brand Identity</span>
@@ -43,7 +40,7 @@
     </div>
   </div>
 
-  <!-- Dual Header Navbar (Studio K95 Style with Character Roll-Overs) -->
+  <!-- Dual Header Navbar (Studio K95 Style) -->
   <header class="nav nav--no-blend">
     <div class="nav__logo" data-nosnippet>
       <a href="/" class="is-logo">
@@ -60,7 +57,7 @@
         <button type="button" id="mode-spiral" class="layout-switch__btn">Spiral</button>
       </div>
 
-      <div class="theme-switch" title="Dark & Light Mode Switcher">
+      <div class="theme-switch" title="Dark &amp; Light Mode Switcher">
         <span class="theme-switch__pill" aria-hidden="true"></span>
         <button type="button" id="theme-btn-dark" class="theme-switch__btn is-active">&#127769; Dark</button>
         <button type="button" id="theme-btn-light" class="theme-switch__btn">&#9728;&#65039; Light</button>
@@ -75,6 +72,12 @@
         </a>
       </li>
       <li>
+        <a href="#specimen" class="nav__link">
+          <span class="nav__link-dot"></span>
+          <span class="nav__link-text">Specimen</span>
+        </a>
+      </li>
+      <li>
         <a href="#services" class="nav__link">
           <span class="nav__link-dot"></span>
           <span class="nav__link-text">Services</span>
@@ -86,10 +89,9 @@
           <span class="nav__link-text">Studio</span>
         </a>
       </li>
-      
       <li>
-        <a href="#contact" class="nav__link nav-cta-pill">
-          <span class="nav__link-text">Contact &rarr;</span>
+        <a href="#estimator" class="nav__link nav-cta-pill">
+          <span class="nav__link-text">Estimate &rarr;</span>
         </a>
       </li>
     </ul>
@@ -107,11 +109,13 @@
     </div>
     <ul>
       <li><a href="#works">Selected Works</a></li>
+      <li><a href="#specimen">Design Specimen</a></li>
       <li><a href="#services">Capabilities</a></li>
       <li><a href="#about">About Studio</a></li>
+      <li><a href="#estimator">Estimate Project</a></li>
       <li><a href="https://www.behance.net/catxmedia" target="_blank" rel="noopener">Behance Portfolio &rarr;</a></li>
       <li><a href="https://www.instagram.com/catx.media/" target="_blank" rel="noopener">Instagram (@catx.media) &rarr;</a></li>
-            <li><a href="mailto:contact@catx.media" class="menu-highlight">Start a Project &rarr;</a></li>
+      <li><a href="mailto:contact@catx.media" class="menu-highlight">Start a Project &rarr;</a></li>
       <li>
         <button type="button" class="mobile-theme-btn js-theme-toggle">
           <span class="theme-text-dark">&#9728;&#65039; Switch to Light Mode</span>
@@ -129,19 +133,16 @@
     
     <!-- 1. Hero 3D WebGL Studio Section -->
     <section class="index__section hero-studio-section">
-      <!-- 3D Three.js Interactive Orbit Canvas -->
       <div class="studio-webgl-canvas"></div>
 
-      <!-- Center Brand Glyph & Tagline -->
       <div class="hero__center-content">
         <h1 class="hero__main-brand">CATX</h1>
-        <p class="hero__tagline">Brand &amp; Digital Design Studio &bull; Jaipur, India</p>
+        <p class="hero__tagline">Graphic Design &amp; 3D Motion Studio &bull; Jaipur, India</p>
       </div>
 
-      <!-- Footer Bar inside Hero (K95 Style: 12/20 Selected Works) -->
       <div class="home-footer">
         <span class="home-footer__item">
-          <span>BRAND &amp; DIGITAL DESIGN STUDIO</span>
+          <span>HIGH-END VISUAL ARCHITECTURE</span>
         </span>
         <span class="home-footer__center">
           <span>12 / 20 Selected Works &nbsp;&bull;&nbsp; <a href="#works" class="home-footer__link">Explore All &rarr;</a></span>
@@ -161,7 +162,7 @@
           <div class="kinetic-mask"><span class="kinetic-line">Culture.</span></div>
         </h2>
         <div class="intro__subtext">
-          <span>EST. 2018 IN JAIPUR, INDIA &nbsp;&bull;&nbsp; BRANDING &nbsp;&bull;&nbsp; UI/UX &nbsp;&bull;&nbsp; 3D CGI MOTION &nbsp;&bull;&nbsp; DIGITAL PRODUCTS</span>
+          <span>EST. 2018 IN JAIPUR, INDIA &nbsp;&bull;&nbsp; BRANDING &nbsp;&bull;&nbsp; PACKAGING &nbsp;&bull;&nbsp; 3D CGI MOTION &nbsp;&bull;&nbsp; DIGITAL PRODUCTS</span>
         </div>
       </div>
     </section>
@@ -170,34 +171,10 @@
     <section id="about" class="index__section about --min-height-unset">
       <div class="page__padding">
         <div class="section__label"><span>ABOUT THE STUDIO</span></div>
-        <div class="paragraph">
-          <span class="word"><span class="word__inner">We</span></span>
-          <span class="word"><span class="word__inner">are</span></span>
-          <span class="word brand-word"><span class="word__inner">CATX</span></span>
-          <span class="word brand-word"><span class="word__inner">Media,</span></span>
-          <span class="word"><span class="word__inner">an</span></span>
-          <span class="word"><span class="word__inner">independent</span></span>
-          <span class="word"><span class="word__inner">design</span></span>
-          <span class="word"><span class="word__inner">studio</span></span>
-          <span class="word"><span class="word__inner">turning</span></span>
-          <span class="word"><span class="word__inner">bold</span></span>
-          <span class="word"><span class="word__inner">visions</span></span>
-          <span class="word"><span class="word__inner">into</span></span>
-          <span class="word"><span class="word__inner">iconic</span></span>
-          <span class="word"><span class="word__inner">brand</span></span>
-          <span class="word"><span class="word__inner">identities,</span></span>
-          <span class="word"><span class="word__inner">digital</span></span>
-          <span class="word"><span class="word__inner">products,</span></span>
-          <span class="word"><span class="word__inner">and</span></span>
-          <span class="word"><span class="word__inner">3D</span></span>
-          <span class="word"><span class="word__inner">motion</span></span>
-          <span class="word"><span class="word__inner">systems</span></span>
-          <span class="word"><span class="word__inner">that</span></span>
-          <span class="word"><span class="word__inner">scale</span></span>
-          <span class="word"><span class="word__inner">globally.</span></span>
+        <div class="paragraph paragraph--large js-split-words">
+          CatX Media is an independent graphic design and 3D motion studio. We specialize in transforming ambitious visions into iconic brand identities, bespoke packaging architecture, digital products, and 3D CGI motion systems that scale globally.
         </div>
 
-        <!-- Studio Metrics Grid -->
         <div class="about__stats">
           <div class="stat__card">
             <span class="stat__num">150+</span>
@@ -219,21 +196,30 @@
       </div>
     </section>
 
-    <!-- 4. Interactive Works Showcase Cards -->
+    <!-- 4. Interactive Category Portfolio Matrix -->
     <section id="works" class="index__section projects">
       <div class="projects__title">
         <div class="projects__title__wrap">
-          <span class="title --xlarge --desktop">Selected Works &nbsp;&bull;&nbsp; Featured Projects &nbsp;<span>&bull;</span>&nbsp; Selected Works &nbsp;&bull;&nbsp; Featured Projects &nbsp;<span>â€¢</span>&nbsp;</span>
+          <span class="title --xlarge --desktop">Selected Works &nbsp;&bull;&nbsp; Featured Projects &nbsp;&bull;&nbsp; Selected Works &nbsp;&bull;&nbsp; Featured Projects</span>
           <span class="title --xlarge --mobile">Selected Works</span>
         </div>
+      </div>
+
+      <!-- Filter Category Tabs -->
+      <div class="portfolio-filter-bar page__padding">
+        <button type="button" class="filter-tab-btn js-filter-btn is-active" data-filter="all">All Projects</button>
+        <button type="button" class="filter-tab-btn js-filter-btn" data-filter="branding">Brand Identity</button>
+        <button type="button" class="filter-tab-btn js-filter-btn" data-filter="packaging">Packaging &amp; Merch</button>
+        <button type="button" class="filter-tab-btn js-filter-btn" data-filter="3d-motion">3D &amp; CGI Motion</button>
+        <button type="button" class="filter-tab-btn js-filter-btn" data-filter="digital">Digital Products</button>
       </div>
 
       <div class="projects__content">
         <div class="projects__grid">
           <div class="projects__wrap">
             
-            <!-- 1. Brand Identity & Systems -->
-            <a href="https://www.behance.net/catxmedia" target="_blank" rel="noopener" class="projects__item" data-index="0">
+            <!-- Project 1: Branding -->
+            <a href="#" class="projects__item" data-index="0" data-category="branding">
               <div class="projects__item__asset u-abs">
                 <div class="projects__item__logo u-abs u-center">
                   <img src="/images/catx-logo.png" alt="Brand Identity">
@@ -241,44 +227,26 @@
                 <div class="projects__item__loop u-abs js-loop is-active">
                   <picture>
                     <source srcset="/images/collections/86af7f.webp" type="image/webp">
-                    <img src="/images/collections/86af7f.webp" alt="Brand Identity Project" loading="lazy">
+                    <img src="/images/collections/86af7f.webp" alt="Aura Luxury Brand Architecture" loading="lazy">
                   </picture>
                 </div>
                 <div class="projects__item__loop u-abs js-loop">
                   <picture>
                     <source srcset="/images/collections/5f5c0b.webp" type="image/webp">
-                    <img src="/images/collections/5f5c0b.webp" alt="Brand Identity Project" loading="lazy">
-                  </picture>
-                </div>
-                <div class="projects__item__loop u-abs js-loop">
-                  <picture>
-                    <source srcset="/images/collections/9aecd5.webp" type="image/webp">
-                    <img src="/images/collections/9aecd5.webp" alt="Brand Identity Project" loading="lazy">
-                  </picture>
-                </div>
-                <div class="projects__item__loop u-abs js-loop">
-                  <picture>
-                    <source srcset="/images/collections/6f66fc.webp" type="image/webp">
-                    <img src="/images/collections/6f66fc.webp" alt="Brand Identity Project" loading="lazy">
-                  </picture>
-                </div>
-                <div class="projects__item__loop u-abs js-loop">
-                  <picture>
-                    <source srcset="/images/collections/2633fc.webp" type="image/webp">
-                    <img src="/images/collections/2633fc.webp" alt="Brand Identity Project" loading="lazy">
+                    <img src="/images/collections/5f5c0b.webp" alt="Aura Luxury Brand Architecture" loading="lazy">
                   </picture>
                 </div>
               </div>
               <div class="projects__item__label">
                 <div>
-                  <span>Brand Identity &amp; Systems</span>
+                  <span>Aura Luxury Brand Architecture</span>
                   <span class="--desktop">View Case Study &rarr;</span>
                 </div>
               </div>
             </a>
 
-            <!-- 2. UI/UX & Web Experiences -->
-            <a href="https://www.behance.net/catxmedia" target="_blank" rel="noopener" class="projects__item" data-index="1">
+            <!-- Project 2: Digital -->
+            <a href="#" class="projects__item" data-index="1" data-category="digital">
               <div class="projects__item__asset u-abs">
                 <div class="projects__item__logo u-abs u-center">
                   <img src="/images/catx-logo.png" alt="Digital Products">
@@ -286,97 +254,73 @@
                 <div class="projects__item__loop u-abs js-loop is-active">
                   <picture>
                     <source srcset="/images/collections/31b44e.webp" type="image/webp">
-                    <img src="/images/collections/31b44e.webp" alt="Digital Products" loading="lazy">
+                    <img src="/images/collections/31b44e.webp" alt="Nexus WebGL Digital Product" loading="lazy">
                   </picture>
                 </div>
                 <div class="projects__item__loop u-abs js-loop">
                   <picture>
                     <source srcset="/images/collections/533811.webp" type="image/webp">
-                    <img src="/images/collections/533811.webp" alt="Digital Products" loading="lazy">
-                  </picture>
-                </div>
-                <div class="projects__item__loop u-abs js-loop">
-                  <picture>
-                    <source srcset="/images/collections/8ec9b3.webp" type="image/webp">
-                    <img src="/images/collections/8ec9b3.webp" alt="Digital Products" loading="lazy">
-                  </picture>
-                </div>
-                <div class="projects__item__loop u-abs js-loop">
-                  <picture>
-                    <source srcset="/images/collections/4ec2e5.webp" type="image/webp">
-                    <img src="/images/collections/4ec2e5.webp" alt="Digital Products" loading="lazy">
+                    <img src="/images/collections/533811.webp" alt="Nexus WebGL Digital Product" loading="lazy">
                   </picture>
                 </div>
               </div>
               <div class="projects__item__label">
                 <div>
-                  <span>Digital Products &amp; Web</span>
+                  <span>Nexus WebGL Product Platform</span>
                   <span class="--desktop">View Case Study &rarr;</span>
                 </div>
               </div>
             </a>
 
-            <!-- 3. 3D Motion & CGI -->
-            <a href="https://www.behance.net/catxmedia" target="_blank" rel="noopener" class="projects__item" data-index="2">
+            <!-- Project 3: 3D Motion -->
+            <a href="#" class="projects__item" data-index="2" data-category="3d-motion">
               <div class="projects__item__asset u-abs">
                 <div class="projects__item__logo u-abs u-center">
-                  <img src="/images/catx-logo.png" alt="3D & Motion">
+                  <img src="/images/catx-logo.png" alt="3D Motion">
                 </div>
                 <div class="projects__item__loop u-abs js-loop is-active">
                   <picture>
                     <source srcset="/images/collections/7378a7.webp" type="image/webp">
-                    <img src="/images/collections/7378a7.webp" alt="3D Motion" loading="lazy">
+                    <img src="/images/collections/7378a7.webp" alt="Kinetic 3D Motion Campaign" loading="lazy">
                   </picture>
                 </div>
                 <div class="projects__item__loop u-abs js-loop">
                   <picture>
                     <source srcset="/images/collections/905aba.webp" type="image/webp">
-                    <img src="/images/collections/905aba.webp" alt="3D Motion" loading="lazy">
-                  </picture>
-                </div>
-                <div class="projects__item__loop u-abs js-loop">
-                  <picture>
-                    <source srcset="/images/collections/3d848e.webp" type="image/webp">
-                    <img src="/images/collections/3d848e.webp" alt="3D Motion" loading="lazy">
+                    <img src="/images/collections/905aba.webp" alt="Kinetic 3D Motion Campaign" loading="lazy">
                   </picture>
                 </div>
               </div>
               <div class="projects__item__label">
                 <div>
-                  <span>3D Motion &amp; Art Direction</span>
+                  <span>Kinetic 3D Motion Suite</span>
                   <span class="--desktop">View Case Study &rarr;</span>
                 </div>
               </div>
             </a>
 
-            <!-- 4. Visual Content & Campaigns -->
-            <a href="https://www.behance.net/catxmedia" target="_blank" rel="noopener" class="projects__item" data-index="3">
+            <!-- Project 4: Packaging -->
+            <a href="#" class="projects__item" data-index="3" data-category="packaging">
               <div class="projects__item__asset u-abs">
                 <div class="projects__item__logo u-abs u-center">
-                  <img src="/images/catx-logo.png" alt="Creative Direction">
+                  <img src="/images/catx-logo.png" alt="Packaging">
                 </div>
                 <div class="projects__item__loop u-abs js-loop is-active">
                   <picture>
                     <source srcset="/images/collections/63629e.webp" type="image/webp">
-                    <img src="/images/collections/63629e.webp" alt="Campaigns" loading="lazy">
+                    <img src="/images/collections/63629e.webp" alt="Verve Editorial &amp; Packaging" loading="lazy">
                   </picture>
                 </div>
                 <div class="projects__item__loop u-abs js-loop">
                   <picture>
                     <source srcset="/images/collections/b25ce2.webp" type="image/webp">
-                    <img src="/images/collections/b25ce2.webp" alt="Campaigns" loading="lazy">
-                  </picture>
-                </div>
-                <div class="projects__item__loop u-abs js-loop">
-                  <picture>
-                    <source srcset="/images/collections/667502.webp" type="image/webp">
-                    <img src="/images/collections/667502.webp" alt="Campaigns" loading="lazy">
+                    <img src="/images/collections/b25ce2.webp" alt="Verve Editorial &amp; Packaging" loading="lazy">
                   </picture>
                 </div>
               </div>
               <div class="projects__item__label">
                 <div>
-                  <span>Campaigns &amp; Packaging</span>
+                  <span>Verve Editorial &amp; Packaging</span>
                   <span class="--desktop">View Case Study &rarr;</span>
                 </div>
               </div>
@@ -387,7 +331,88 @@
       </div>
     </section>
 
-    <!-- 5. Core Ethos Section with Video Popover -->
+    <!-- 5. NEW: 3D Product & Packaging Mockup Inspector Lab -->
+    <section class="index__section mockup-lab-section page__padding">
+      <div class="section__label"><span>3D MOCKUP INSPECTOR</span></div>
+      <h2 class="title title--large">Interactive 3D Product Canvas</h2>
+      <p class="paragraph" style="margin-bottom: 24px;">Drag &amp; rotate to inspect custom 3D packaging &amp; CGI label architecture in real-time.</p>
+      
+      <div class="mockup-canvas-wrapper">
+        <div class="mockup-webgl-canvas"></div>
+        <div class="mockup-control-hint"><span>DRAG 3D MODEL TO ROTATE</span></div>
+      </div>
+    </section>
+
+    <!-- 6. NEW: Interactive Design System & Token Specimen -->
+    <section id="specimen" class="index__section specimen-section page__padding">
+      <div class="section__label"><span>DESIGN SYSTEM LAB</span></div>
+      <h2 class="title title--large">Typography &amp; Token Specimen</h2>
+      
+      <div class="specimen-grid">
+        <!-- Variable Typography Controls -->
+        <div class="specimen-card">
+          <h3 class="specimen-card__title">Kinetic Typography Specimen</h3>
+          <div class="specimen-controls">
+            <div class="control-group">
+              <label>Size: <span id="specimen-size-val">48px</span></label>
+              <input type="range" id="specimen-size" min="20" max="96" value="48">
+            </div>
+            <div class="control-group">
+              <label>Weight: <span id="specimen-weight-val">700</span></label>
+              <input type="range" id="specimen-weight" min="400" max="900" step="100" value="700">
+            </div>
+            <div class="control-group">
+              <label>Tracking: <span id="specimen-tracking-val">0.04em</span></label>
+              <input type="range" id="specimen-tracking" min="-5" max="30" value="4">
+            </div>
+          </div>
+          <div class="specimen-sample-box">
+            <p class="specimen-sample-text">CATX DESIGN SYSTEM 2026</p>
+          </div>
+        </div>
+
+        <!-- Color Palette Token Chips -->
+        <div class="specimen-card">
+          <h3 class="specimen-card__title">Brand Color Palette Tokens (Click to Copy)</h3>
+          <div class="color-chips-grid">
+            <div class="color-token-chip js-color-chip" data-hex="#8000FF" style="background-color: #8000FF; color: #ffffff;">
+              <strong>CatX Purple</strong>
+              <span>#8000FF</span>
+            </div>
+            <div class="color-token-chip js-color-chip" data-hex="#0B0512" style="background-color: #0B0512; color: #ffffff;">
+              <strong>Obsidian Dark</strong>
+              <span>#0B0512</span>
+            </div>
+            <div class="color-token-chip js-color-chip" data-hex="#F7F7FA" style="background-color: #F7F7FA; color: #000000;">
+              <strong>Alabaster Silk</strong>
+              <span>#F7F7FA</span>
+            </div>
+            <div class="color-token-chip js-color-chip" data-hex="#A346FF" style="background-color: #A346FF; color: #ffffff;">
+              <strong>Accent Light</strong>
+              <span>#A346FF</span>
+            </div>
+          </div>
+
+          <!-- Logo Construction Grid Box -->
+          <div class="logo-grid-wrapper" style="margin-top: 24px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <span style="font-size: 13px; font-weight: 700; text-transform: uppercase;">Logo Geometry &amp; Grid Lines</span>
+              <button type="button" id="toggle-grid" class="rounded --outline" style="padding: 6px 16px; font-size: 11px;">Toggle Construction Lines</button>
+            </div>
+            <div class="logo-grid-box">
+              <img src="/images/catx-logo.png" alt="CATX Logo Construction" style="width: 80px; height: 80px;">
+              <div class="grid-line line-h1"></div>
+              <div class="grid-line line-h2"></div>
+              <div class="grid-line line-v1"></div>
+              <div class="grid-line line-v2"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Studio Philosophy & Video Showcase -->
     <section id="services" class="index__section --min-height-unset apecoin">
       <div class="page__padding">
         <div class="section__label"><span>STUDIO PHILOSOPHY</span></div>
@@ -400,7 +425,7 @@
           </u> &amp; Vision.
         </h2>
         <div class="paragraph">
-          Every project at CATX Media &mdash; Brands, we build visual systems that leave an unforgettable mark.
+          Every project at CATX Media is fueled by obsessive craft, contemporary aesthetics, and deep strategic thinking. From Jaipur to global brands, we build visual systems that leave an unforgettable mark.
         </div>
         <div class="apecoin__button">
           <a href="https://www.behance.net/catxmedia" target="_blank" rel="noopener" class="rounded">
@@ -410,7 +435,52 @@
       </div>
     </section>
 
-    <!-- 6. Let's Create / Contact Section -->
+    <!-- 8. NEW: Interactive Project Scope & Estimator Desk -->
+    <section id="estimator" class="index__section estimator-section page__padding">
+      <div class="section__label"><span>PROJECT DESK</span></div>
+      <h2 class="title title--large">Interactive Project Estimator</h2>
+      <p class="paragraph" style="margin-bottom: 32px;">Select your desired project scope &amp; timeline to generate an instant estimate and project brief.</p>
+
+      <div class="estimator-card">
+        <div class="estimator-group">
+          <label class="estimator-label">01. Select Project Scope:</label>
+          <div class="estimator-buttons">
+            <button type="button" class="estimator-pill-btn js-scope-btn is-active" data-scope="Brand Identity">Brand Identity</button>
+            <button type="button" class="estimator-pill-btn js-scope-btn" data-scope="Packaging Design">Packaging &amp; Merch</button>
+            <button type="button" class="estimator-pill-btn js-scope-btn" data-scope="3D Motion &amp; CGI">3D CGI &amp; Motion</button>
+            <button type="button" class="estimator-pill-btn js-scope-btn" data-scope="WebGL Website">WebGL Web Product</button>
+          </div>
+        </div>
+
+        <div class="estimator-group" style="margin-top: 24px;">
+          <label class="estimator-label">02. Select Timeline Preference:</label>
+          <div class="estimator-buttons">
+            <button type="button" class="estimator-pill-btn js-timeline-btn" data-timeline="Rush (2-3 Weeks)">Rush (2-3 Weeks)</button>
+            <button type="button" class="estimator-pill-btn js-timeline-btn is-active" data-timeline="Standard (4-6 Weeks)">Standard (4-6 Weeks)</button>
+            <button type="button" class="estimator-pill-btn js-timeline-btn" data-timeline="Enterprise (8+ Weeks)">Enterprise (8+ Weeks)</button>
+          </div>
+        </div>
+
+        <!-- Calculated Summary -->
+        <div class="estimator-summary" style="margin-top: 32px;">
+          <div class="summary-line">
+            <span>Selected Scope:</span>
+            <strong id="est-scope">Brand Identity</strong>
+          </div>
+          <div class="summary-line">
+            <span>Estimated Turnaround:</span>
+            <strong id="est-timeline">Standard (4-6 Weeks)</strong>
+          </div>
+          <div style="margin-top: 24px; text-align: center;">
+            <a href="#" id="send-brief-btn" class="rounded">
+              <span>Send Pre-filled Brief via Email &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Contact / Let's Create Section -->
     <section id="contact" class="index__section index__footer">
       <div class="page__padding">
         <div class="index__footer__join u-center">
@@ -434,7 +504,7 @@
       </div>
     </section>
 
-    <!-- 7. Studio Capabilities Directory (Light Luxury Footer) -->
+    <!-- 10. Studio Capabilities Directory (Light Luxury Footer) -->
     <footer class="collections --light">
       <div class="page__padding">
         <h3 class="collection_header">Studio Capabilities &amp; Services</h3>
@@ -477,7 +547,7 @@
       </div>
     </footer>
 
-    <!-- Main Light Footer Links -->
+    <!-- Main Footer Links -->
     <footer class="index__section --min-height-unset footer --light">
       <div class="page__padding">
         <div class="footer__grid">
@@ -488,6 +558,7 @@
           </ul>
           <ul>
             <li><a href="#works">Works</a></li>
+            <li><a href="#specimen">Specimen</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#about">About</a></li>
           </ul>
@@ -498,7 +569,7 @@
           </ul>
         </div>
         <div class="footer__bottom">
-          <p>Â© 2026 CATX Media. All rights reserved.</p>
+          <p>&copy; 2026 CATX Media. All rights reserved.</p>
           <p>Jaipur, India &bull; Crafted for visual excellence.</p>
         </div>
       </div>
@@ -506,9 +577,24 @@
 
   </main>
 
+  <!-- Full-Screen Case Study Detail Modal -->
+  <div id="case-study-modal" class="modal-overlay">
+    <div class="modal-content">
+      <button type="button" id="modal-close" class="modal-close-btn">&times;</button>
+      <div class="modal-header">
+        <span id="modal-category" class="modal-category-tag">Category</span>
+        <h2 id="modal-title" class="modal-title-text">Project Title</h2>
+      </div>
+      <p id="modal-desc" class="modal-description">Project description and strategy details.</p>
+      
+      <div class="modal-section-title">Brand Color Palette Tokens (Click to Copy):</div>
+      <div id="modal-colors" class="modal-color-chips"></div>
+
+      <div class="modal-section-title" style="margin-top: 24px;">Project Gallery &amp; Deliverables:</div>
+      <div id="modal-gallery" class="modal-gallery-grid"></div>
+    </div>
+  </div>
+
   <script type="module" src="/src/main.js"></script>
 </body>
 </html>
-
-
-
