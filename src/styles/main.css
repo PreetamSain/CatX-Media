@@ -1217,3 +1217,206 @@ html[data-theme="dark"] .theme-text-dark { display: inline; }
 html[data-theme="light"] .theme-text-dark { display: none; }
 html[data-theme="light"] .theme-text-light { display: inline; }
 
+
+
+/* =========================================================
+   ULTRA-LUXURY LIGHT MODE COMPONENT OVERRIDES
+   ========================================================= */
+html[data-theme="light"] body {
+  background-color: #f7f7fa;
+  color: #09090c;
+}
+
+html[data-theme="light"] .nav {
+  background: rgba(247, 247, 250, 0.88);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+html[data-theme="light"] .nav__brand-name {
+  color: #09090c;
+}
+
+html[data-theme="light"] .nav__link {
+  color: #09090c;
+}
+
+html[data-theme="light"] .nav__link:hover {
+  color: var(--accent);
+}
+
+html[data-theme="light"] .nav__link-dot {
+  background: var(--accent);
+}
+
+html[data-theme="light"] .nav-cta-pill {
+  background: var(--accent);
+  color: #ffffff !important;
+  border-color: var(--accent);
+}
+
+html[data-theme="light"] .nav-cta-pill:hover {
+  background: #6a00d9;
+  border-color: #6a00d9;
+}
+
+html[data-theme="light"] .layout-switch,
+html[data-theme="light"] .theme-switch {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+html[data-theme="light"] .layout-switch__pill,
+html[data-theme="light"] .theme-switch__pill {
+  background: #09090c;
+}
+
+html[data-theme="light"] .layout-switch__btn,
+html[data-theme="light"] .theme-switch__btn {
+  color: #52525b;
+}
+
+html[data-theme="light"] .layout-switch__btn.is-active,
+html[data-theme="light"] .theme-switch__btn.is-active {
+  color: #ffffff !important;
+}
+
+html[data-theme="light"] .hero-studio-section {
+  background: radial-gradient(circle at center, #ffffff 0%, #f2f2f7 85%);
+}
+
+html[data-theme="light"] .hero__main-brand {
+  color: #09090c;
+  text-shadow: none;
+}
+
+html[data-theme="light"] .hero__tagline {
+  color: var(--accent);
+}
+
+html[data-theme="light"] .home-footer {
+  color: #71717a;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+html[data-theme="light"] .home-footer__link {
+  color: #09090c;
+}
+
+html[data-theme="light"] .intro-kinetic {
+  background-color: #f7f7fa;
+}
+
+html[data-theme="light"] .title {
+  color: #09090c;
+}
+
+html[data-theme="light"] .title-highlight {
+  color: var(--accent);
+}
+
+html[data-theme="light"] .intro__subtext {
+  color: #52525b;
+}
+
+html[data-theme="light"] .word__inner {
+  color: #09090c;
+}
+
+html[data-theme="light"] .stat__card {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+html[data-theme="light"] .stat__num {
+  color: var(--accent);
+}
+
+html[data-theme="light"] .stat__text {
+  color: #52525b;
+}
+
+html[data-theme="light"] .projects {
+  background-color: #f7f7fa;
+}
+
+html[data-theme="light"] .projects__item {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+html[data-theme="light"] .projects__item:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-color: var(--accent);
+}
+
+html[data-theme="light"] .projects__item__logo {
+  background-color: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+html[data-theme="light"] .projects__item__label {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 100%);
+  color: #09090c;
+}
+
+html[data-theme="light"] .projects__item__label .--desktop {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+html[data-theme="light"] .index__section.apecoin {
+  background-color: #f7f7fa;
+}
+
+html[data-theme="light"] .paragraph {
+  color: #27272a;
+}
+
+html[data-theme="light"] .rounded {
+  background: var(--accent);
+  color: #ffffff !important;
+  border: 1px solid var(--accent);
+}
+
+html[data-theme="light"] .rounded:hover {
+  background: #6a00d9;
+  border-color: #6a00d9;
+}
+
+html[data-theme="light"] .rounded.--outline {
+  background: transparent;
+  color: #09090c !important;
+  border: 1.5px solid #09090c;
+}
+
+html[data-theme="light"] .rounded.--outline:hover {
+  background: #09090c;
+  color: #ffffff !important;
+}
+
+html[data-theme="light"] .project-label__pill {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  color: #09090c;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+html[data-theme="light"] .project-label__arrow path {
+  stroke: #09090c;
+}
+
+html[data-theme="light"] .mobile-menu {
+  background-color: #f7f7fa;
+  color: #09090c;
+}
+
+html[data-theme="light"] .mobile-menu a {
+  color: #09090c;
+}
+
+html[data-theme="light"] .mobile-menu__close {
+  color: var(--accent);
+}
