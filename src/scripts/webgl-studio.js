@@ -46,7 +46,7 @@ export function initWebGLStudio() {
   ];
 
   const cardMeshes = [];
-  const radius = 4.4; // Slightly wider orbit so cards don't block center typography
+  const radius = 4.3;
   const cardCount = projectImages.length;
 
   projectImages.forEach((imgSrc, i) => {
@@ -64,10 +64,10 @@ export function initWebGLStudio() {
     const mesh = new THREE.Mesh(geometry, material);
     mesh.position.x = Math.sin(angle) * radius;
     mesh.position.z = Math.cos(angle) * radius;
-    mesh.position.y = Math.sin(angle * 2) * 0.2;
+    mesh.position.y = Math.sin(angle * 2) * 0.18;
     mesh.rotation.y = angle + Math.PI;
 
-    // Glowing border frame
+    // Glowing purple border frame
     const wireGeo = new THREE.EdgesGeometry(geometry);
     const wireMat = new THREE.LineBasicMaterial({ color: 0x8000ff, linewidth: 1.5 });
     const wireframe = new THREE.LineSegments(wireGeo, wireMat);
@@ -109,15 +109,14 @@ export function initWebGLStudio() {
   const particleMesh = new THREE.Points(particleGeo, particleMat);
   scene.add(particleMesh);
 
-  // Mouse drag & inertial rotation
+  // Mouse drag & rotation variables
   let isDragging = false;
-  let isHoveringCard = false;
   let prevMouseX = 0;
   let targetRotationY = 0;
   let targetRotationX = 0;
   
-  // Super smooth, slow, elegant auto-rotation speed (Studio K95 luxury pacing)
-  let autoRotateSpeed = 0.0006; 
+  // Golden standard luxury rotation speed: ~28 seconds per full orbit
+  const baseRotationSpeed = 0.0035; 
   let activeMode = 'rings'; // 'rings' or 'spiral'
 
   const cuePill = document.querySelector('.project-label__cue');
@@ -136,22 +135,21 @@ export function initWebGLStudio() {
   window.addEventListener('mousemove', (e) => {
     if (isDragging) {
       const deltaX = e.clientX - prevMouseX;
-      targetRotationY += deltaX * 0.003;
+      targetRotationY += deltaX * 0.006;
       prevMouseX = e.clientX;
     }
 
     const normX = (e.clientX / window.innerWidth) * 2 - 1;
     const normY = -(e.clientY / window.innerHeight) * 2 + 1;
-    targetRotationX = normY * 0.1;
+    targetRotationX = normY * 0.12;
 
-    // Raycasting to highlight hovered 3D card
+    // Raycasting for hovered 3D card detection
     const raycaster = new THREE.Raycaster();
     const mouseVector = new THREE.Vector2(normX, normY);
     raycaster.setFromCamera(mouseVector, camera);
 
     const intersects = raycaster.intersectObjects(cardMeshes);
     if (intersects.length > 0) {
-      isHoveringCard = true;
       const hovered = intersects[0].object;
       if (projectPill && projectTitleSpan) {
         projectTitleSpan.textContent = hovered.userData.title;
@@ -160,7 +158,6 @@ export function initWebGLStudio() {
       }
       document.body.style.cursor = 'pointer';
     } else {
-      isHoveringCard = false;
       if (projectPill) projectPill.classList.remove('visible');
       if (cuePill) cuePill.classList.add('visible');
       document.body.style.cursor = '';
@@ -180,7 +177,7 @@ export function initWebGLStudio() {
       switchPill?.style.setProperty('transform', 'translate(0)');
       cardMeshes.forEach((mesh, i) => {
         const angle = mesh.userData.baseAngle;
-        mesh.position.set(Math.sin(angle) * radius, Math.sin(angle * 2) * 0.2, Math.cos(angle) * radius);
+        mesh.position.set(Math.sin(angle) * radius, Math.sin(angle * 2) * 0.18, Math.cos(angle) * radius);
       });
     } else {
       spiralBtn?.classList.add('is-active');
@@ -188,8 +185,8 @@ export function initWebGLStudio() {
       switchPill?.style.setProperty('transform', 'translate(calc(100% + 4px))');
       cardMeshes.forEach((mesh, i) => {
         const angle = mesh.userData.baseAngle;
-        const spiralY = (i - cardCount / 2) * 0.5;
-        const spiralR = radius * (1 - (i / cardCount) * 0.25);
+        const spiralY = (i - cardCount / 2) * 0.48;
+        const spiralR = radius * (1 - (i / cardCount) * 0.22);
         mesh.position.set(Math.sin(angle * 1.5) * spiralR, spiralY, Math.cos(angle * 1.5) * spiralR);
       });
     }
@@ -212,18 +209,18 @@ export function initWebGLStudio() {
 
   function animate() {
     requestAnimationFrame(animate);
-    const delta = clock.getDelta();
+    const delta = Math.min(clock.getDelta(), 0.1);
 
-    // Slow gentle auto-rotation when not dragging and not hovering over a card
-    if (!isDragging && !isHoveringCard) {
-      targetRotationY += autoRotateSpeed * (delta / 0.016);
+    // Continuous smooth visible auto-rotation (unless actively dragging)
+    if (!isDragging) {
+      targetRotationY += baseRotationSpeed;
     }
 
-    ringGroup.rotation.y += (targetRotationY - ringGroup.rotation.y) * 0.05;
-    ringGroup.rotation.x += (targetRotationX - ringGroup.rotation.x) * 0.05;
+    ringGroup.rotation.y += (targetRotationY - ringGroup.rotation.y) * 0.08;
+    ringGroup.rotation.x += (targetRotationX - ringGroup.rotation.x) * 0.08;
 
     // Gentle particle drift
-    particleMesh.rotation.y += 0.0003;
+    particleMesh.rotation.y += 0.0005;
 
     renderer.render(scene, camera);
   }
