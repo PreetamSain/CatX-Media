@@ -802,7 +802,7 @@ img, video {
   position: relative;
   cursor: pointer;
   color: var(--accent-light);
-  border-bottom: 3px solid var(--accent);
+  /* border-bottom removed */
 }
 
 .index__section.apecoin .hover {
@@ -1076,6 +1076,7 @@ footer.footer {
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
+
 
 
 
