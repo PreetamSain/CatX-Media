@@ -108,53 +108,7 @@ img, video {
   box-shadow: 0 0 10px var(--accent-glow);
 }
 
-/* =========================================================
-   BOOT PRELOADER (Studio K95 Style)
-   ========================================================= */
-.boot-loader {
-  position: fixed;
-  inset: 0;
-  z-index: 2147483646;
-  display: grid;
-  place-content: center;
-  background: #06020a;
-  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), filter 0.8s ease;
-  pointer-events: auto;
-}
 
-.boot-loader.is-fading {
-  opacity: 0;
-  filter: blur(20px);
-  pointer-events: none;
-}
-
-.boot-loader__content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-.boot-loader__logo {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  box-shadow: 0 0 35px var(--accent);
-  animation: boot-pulse 1.8s infinite ease-in-out;
-}
-
-@keyframes boot-pulse {
-  0%, 100% { transform: scale(1); box-shadow: 0 0 25px var(--accent); }
-  50% { transform: scale(1.08); box-shadow: 0 0 45px var(--accent-glow); }
-}
-
-.boot-loader__counter {
-  color: var(--accent-light);
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  font-variant-numeric: tabular-nums;
-}
 
 /* =========================================================
    MAGNETIC CURSOR & DYNAMIC PROJECT TOOLTIP (K95 Style)
