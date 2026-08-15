@@ -290,7 +290,20 @@ img, video {
 }
 
 /* Mode Switcher (Rings / Spiral) */
-.layout-switch {
+.nav__center-controls {
+  align-items: center;
+  display: inline-flex;
+  gap: 12px;
+  left: 50%;
+  pointer-events: auto;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.layout-switch,
+.theme-switch {
   align-items: center;
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -300,12 +313,41 @@ img, video {
   display: inline-flex;
   gap: 4px;
   padding: 4px;
-  pointer-events: auto;
+  position: relative;
+}
+
+.theme-switch__pill {
+  background: var(--accent);
+  border-radius: 999px;
+  bottom: 4px;
+  left: 4px;
+  pointer-events: none;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: none;
+  top: 4px;
+  transform: translate(0);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  width: calc(50% - 6px);
+}
+
+.theme-switch__btn {
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 8px 16px;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: color 0.22s ease;
+  z-index: 1;
+}
+
+.theme-switch__btn.is-active {
+  color: #ffffff;
 }
 
 .layout-switch__pill {
@@ -395,7 +437,7 @@ img, video {
 }
 
 @media (max-width: 900px) {
-  .nav__links, .layout-switch {
+  .nav__links, .nav__center-controls {
     display: none;
   }
   .nav__menu-btn {
@@ -1174,3 +1216,4 @@ html[data-theme="dark"] .theme-text-dark { display: inline; }
 
 html[data-theme="light"] .theme-text-dark { display: none; }
 html[data-theme="light"] .theme-text-light { display: inline; }
+
