@@ -6,7 +6,7 @@ export function initWebGLStudio() {
 
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
-  camera.position.set(0, 0, 7);
+  camera.position.set(0, 0, 8.2);
 
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
   renderer.setSize(window.innerWidth, window.innerHeight);
@@ -21,7 +21,7 @@ export function initWebGLStudio() {
   const ringGroup = new THREE.Group();
   scene.add(ringGroup);
 
-  // Sample Project Textures for 3D Ring (from public collections)
+  // Sample Project Textures for 3D Ring
   const textureLoader = new THREE.TextureLoader();
   const projectImages = [
     '/images/collections/86af7f.webp',
@@ -46,7 +46,7 @@ export function initWebGLStudio() {
   ];
 
   const cardMeshes = [];
-  const radius = 3.8;
+  const radius = 4.4; // Slightly wider orbit so cards don't block center typography
   const cardCount = projectImages.length;
 
   projectImages.forEach((imgSrc, i) => {
@@ -58,13 +58,13 @@ export function initWebGLStudio() {
       map: texture,
       side: THREE.DoubleSide,
       transparent: true,
-      opacity: 0.92
+      opacity: 0.94
     });
 
     const mesh = new THREE.Mesh(geometry, material);
     mesh.position.x = Math.sin(angle) * radius;
     mesh.position.z = Math.cos(angle) * radius;
-    mesh.position.y = Math.sin(angle * 2) * 0.25;
+    mesh.position.y = Math.sin(angle * 2) * 0.2;
     mesh.rotation.y = angle + Math.PI;
 
     // Glowing border frame
@@ -80,16 +80,16 @@ export function initWebGLStudio() {
 
   // Background Ambient Particles (Electric Purple + White)
   const particleGeo = new THREE.BufferGeometry();
-  const pCount = 600;
+  const pCount = 500;
   const pPositions = new Float32Array(pCount * 3);
   const pColors = new Float32Array(pCount * 3);
 
   for (let i = 0; i < pCount; i++) {
-    pPositions[i * 3] = (Math.random() - 0.5) * 20;
-    pPositions[i * 3 + 1] = (Math.random() - 0.5) * 14;
-    pPositions[i * 3 + 2] = (Math.random() - 0.5) * 12 - 2;
+    pPositions[i * 3] = (Math.random() - 0.5) * 22;
+    pPositions[i * 3 + 1] = (Math.random() - 0.5) * 16;
+    pPositions[i * 3 + 2] = (Math.random() - 0.5) * 14 - 2;
 
-    const isPurple = Math.random() > 0.4;
+    const isPurple = Math.random() > 0.45;
     pColors[i * 3] = isPurple ? 0.5 : 1.0;
     pColors[i * 3 + 1] = isPurple ? 0.0 : 1.0;
     pColors[i * 3 + 2] = isPurple ? 1.0 : 1.0;
@@ -99,10 +99,10 @@ export function initWebGLStudio() {
   particleGeo.setAttribute('color', new THREE.BufferAttribute(pColors, 3));
 
   const particleMat = new THREE.PointsMaterial({
-    size: 0.04,
+    size: 0.035,
     vertexColors: true,
     transparent: true,
-    opacity: 0.75,
+    opacity: 0.7,
     blending: THREE.AdditiveBlending
   });
 
@@ -111,10 +111,13 @@ export function initWebGLStudio() {
 
   // Mouse drag & inertial rotation
   let isDragging = false;
+  let isHoveringCard = false;
   let prevMouseX = 0;
   let targetRotationY = 0;
   let targetRotationX = 0;
-  let autoRotateSpeed = 0.003;
+  
+  // Super smooth, slow, elegant auto-rotation speed (Studio K95 luxury pacing)
+  let autoRotateSpeed = 0.0006; 
   let activeMode = 'rings'; // 'rings' or 'spiral'
 
   const cuePill = document.querySelector('.project-label__cue');
@@ -133,13 +136,13 @@ export function initWebGLStudio() {
   window.addEventListener('mousemove', (e) => {
     if (isDragging) {
       const deltaX = e.clientX - prevMouseX;
-      targetRotationY += deltaX * 0.005;
+      targetRotationY += deltaX * 0.003;
       prevMouseX = e.clientX;
     }
 
     const normX = (e.clientX / window.innerWidth) * 2 - 1;
     const normY = -(e.clientY / window.innerHeight) * 2 + 1;
-    targetRotationX = normY * 0.15;
+    targetRotationX = normY * 0.1;
 
     // Raycasting to highlight hovered 3D card
     const raycaster = new THREE.Raycaster();
@@ -148,6 +151,7 @@ export function initWebGLStudio() {
 
     const intersects = raycaster.intersectObjects(cardMeshes);
     if (intersects.length > 0) {
+      isHoveringCard = true;
       const hovered = intersects[0].object;
       if (projectPill && projectTitleSpan) {
         projectTitleSpan.textContent = hovered.userData.title;
@@ -156,6 +160,7 @@ export function initWebGLStudio() {
       }
       document.body.style.cursor = 'pointer';
     } else {
+      isHoveringCard = false;
       if (projectPill) projectPill.classList.remove('visible');
       if (cuePill) cuePill.classList.add('visible');
       document.body.style.cursor = '';
@@ -175,7 +180,7 @@ export function initWebGLStudio() {
       switchPill?.style.setProperty('transform', 'translate(0)');
       cardMeshes.forEach((mesh, i) => {
         const angle = mesh.userData.baseAngle;
-        mesh.position.set(Math.sin(angle) * radius, Math.sin(angle * 2) * 0.25, Math.cos(angle) * radius);
+        mesh.position.set(Math.sin(angle) * radius, Math.sin(angle * 2) * 0.2, Math.cos(angle) * radius);
       });
     } else {
       spiralBtn?.classList.add('is-active');
@@ -183,8 +188,8 @@ export function initWebGLStudio() {
       switchPill?.style.setProperty('transform', 'translate(calc(100% + 4px))');
       cardMeshes.forEach((mesh, i) => {
         const angle = mesh.userData.baseAngle;
-        const spiralY = (i - cardCount / 2) * 0.55;
-        const spiralR = radius * (1 - (i / cardCount) * 0.3);
+        const spiralY = (i - cardCount / 2) * 0.5;
+        const spiralR = radius * (1 - (i / cardCount) * 0.25);
         mesh.position.set(Math.sin(angle * 1.5) * spiralR, spiralY, Math.cos(angle * 1.5) * spiralR);
       });
     }
@@ -209,15 +214,16 @@ export function initWebGLStudio() {
     requestAnimationFrame(animate);
     const delta = clock.getDelta();
 
-    if (!isDragging) {
-      targetRotationY += autoRotateSpeed;
+    // Slow gentle auto-rotation when not dragging and not hovering over a card
+    if (!isDragging && !isHoveringCard) {
+      targetRotationY += autoRotateSpeed * (delta / 0.016);
     }
 
-    ringGroup.rotation.y += (targetRotationY - ringGroup.rotation.y) * 0.08;
-    ringGroup.rotation.x += (targetRotationX - ringGroup.rotation.x) * 0.08;
+    ringGroup.rotation.y += (targetRotationY - ringGroup.rotation.y) * 0.05;
+    ringGroup.rotation.x += (targetRotationX - ringGroup.rotation.x) * 0.05;
 
     // Gentle particle drift
-    particleMesh.rotation.y += 0.0008;
+    particleMesh.rotation.y += 0.0003;
 
     renderer.render(scene, camera);
   }
