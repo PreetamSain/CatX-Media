@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+﻿import * as THREE from 'three';
 
 export function initWebGLStudio() {
   const container = document.querySelector('.studio-webgl-canvas');
@@ -67,9 +67,9 @@ export function initWebGLStudio() {
     mesh.position.y = Math.sin(angle * 2) * 0.18;
     mesh.rotation.y = angle + Math.PI;
 
-    // Glowing purple border frame
+    // Clean subtle card border frame
     const wireGeo = new THREE.EdgesGeometry(geometry);
-    const wireMat = new THREE.LineBasicMaterial({ color: 0x8000ff, linewidth: 1.5 });
+    const wireMat = new THREE.LineBasicMaterial({ color: 0x2a2238, linewidth: 1.5 });
     const wireframe = new THREE.LineSegments(wireGeo, wireMat);
     mesh.add(wireframe);
 
@@ -227,3 +227,4 @@ export function initWebGLStudio() {
 
   animate();
 }
+

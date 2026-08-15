@@ -1,4 +1,4 @@
-@import './fonts.css';
+﻿@import './fonts.css';
 
 :root {
   --color: #ffffff;
@@ -8,9 +8,9 @@
   --background-invert: #ffffff;
   --color-white: #ffffff;
   --color-glass: rgba(13, 5, 21, 0.65);
-  --color-glass-border: rgba(128, 0, 255, 0.25);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
   --accent: #8000FF;
-  --accent-glow: #9E2BFF;
+  --accent-glow: transparent;
   --accent-light: #B86BFF;
   --accent-gradient: linear-gradient(135deg, #8000FF 0%, #B86BFF 100%);
   --font-main: 'AK Monument Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -105,7 +105,7 @@ img, video {
   height: 6px;
   border-radius: 50%;
   background-color: var(--accent);
-  box-shadow: 0 0 10px var(--accent-glow);
+  box-shadow: none;
 }
 
 
@@ -165,7 +165,7 @@ img, video {
   transition: opacity 0.3s ease, visibility 0.3s ease;
   visibility: hidden;
   width: max-content;
-  box-shadow: 0 8px 32px rgba(128, 0, 255, 0.35);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
 .project-label__pill.visible {
@@ -236,13 +236,13 @@ img, video {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  box-shadow: 0 0 16px rgba(128, 0, 255, 0.6);
+  box-shadow: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .nav__logo:hover .nav__logo-img {
   transform: scale(1.1) rotate(5deg);
-  box-shadow: 0 0 24px rgba(158, 43, 255, 0.9);
+  box-shadow: none;
 }
 
 .nav__brand-name {
@@ -275,7 +275,7 @@ img, video {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: 0 0 20px rgba(128, 0, 255, 0.3);
+  box-shadow: none;
 }
 
 .layout-switch__pill {
@@ -289,7 +289,7 @@ img, video {
   transform: translate(0);
   transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   width: calc(50% - 6px);
-  box-shadow: 0 0 14px var(--accent-glow);
+  box-shadow: none;
 }
 
 .layout-switch__btn {
@@ -345,7 +345,7 @@ img, video {
   border-radius: 50%;
   height: 6px;
   width: 6px;
-  box-shadow: 0 0 8px var(--accent);
+  box-shadow: none;
 }
 
 .nav-cta-pill {
@@ -354,13 +354,13 @@ img, video {
   background: var(--accent-gradient);
   border: 1px solid var(--accent);
   color: #ffffff !important;
-  box-shadow: 0 0 16px rgba(128, 0, 255, 0.5);
+  box-shadow: none;
   transition: all 0.3s ease;
 }
 
 .nav-cta-pill:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 25px rgba(158, 43, 255, 0.8);
+  box-shadow: none;
 }
 
 .nav__menu-btn {
@@ -433,7 +433,7 @@ img, video {
   letter-spacing: -0.04em;
   color: #ffffff;
   line-height: 0.9;
-  text-shadow: 0 10px 50px rgba(0, 0, 0, 0.9), 0 0 70px rgba(128, 0, 255, 0.5);
+  text-shadow: 0 10px 50px rgba(0, 0, 0, 0.9);
   animation: hero-appear 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
@@ -528,7 +528,7 @@ img, video {
 
 .title-highlight {
   color: var(--accent-light);
-  text-shadow: 0 0 40px rgba(128, 0, 255, 0.6);
+  text-shadow: none;
 }
 
 .intro__subtext {
@@ -704,7 +704,7 @@ img, video {
 }
 
 .projects__item:hover {
-  box-shadow: 0 20px 50px rgba(128, 0, 255, 0.4);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
   border-color: var(--accent);
 }
 
@@ -821,7 +821,7 @@ img, video {
   visibility: hidden;
   pointer-events: none;
   transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
-  box-shadow: 0 16px 40px rgba(128, 0, 255, 0.5);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
   border: 1.5px solid var(--accent);
   z-index: 50;
   background: #000;
@@ -861,13 +861,13 @@ img, video {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   border: 1px solid var(--accent);
-  box-shadow: 0 0 20px rgba(128, 0, 255, 0.4);
+  box-shadow: none;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
 }
 
 .rounded:hover {
-  box-shadow: 0 0 30px rgba(158, 43, 255, 0.7);
+  box-shadow: none;
   transform: translateY(-2px) scale(1.02);
   color: #ffffff;
 }
@@ -882,7 +882,7 @@ img, video {
 .rounded.--outline:hover {
   border-color: var(--accent-light);
   background-color: rgba(128, 0, 255, 0.15);
-  box-shadow: 0 0 20px rgba(128, 0, 255, 0.3);
+  box-shadow: none;
 }
 
 /* =========================================================
@@ -1080,3 +1080,4 @@ footer.footer {
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
+
