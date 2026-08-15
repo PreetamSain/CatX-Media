@@ -116,7 +116,7 @@ export function initWebGLStudio() {
   let targetRotationX = 0;
   
   // Golden standard luxury rotation speed: ~28 seconds per full orbit
-  const baseRotationSpeed = 0.0035; 
+  const baseRotationSpeed = 0.00175; 
   let activeMode = 'rings'; // 'rings' or 'spiral'
 
   const cuePill = document.querySelector('.project-label__cue');
