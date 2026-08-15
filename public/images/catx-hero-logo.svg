@@ -1,0 +1,19 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1024" height="1024" fill="#000000"/>
+  <!-- CatX Text Centered -->
+  <g transform="translate(180, 360)">
+    <!-- C -->
+    <path d="M120 70 C70 70, 30 110, 30 160 L30 240 C30 290, 70 330, 120 330 L160 330 C190 330, 210 310, 210 280 L165 280 C165 290, 150 295, 125 295 C95 295, 75 270, 75 235 L75 165 C75 130, 95 105, 125 105 C150 105, 165 110, 165 120 L210 120 C210 90, 190 70, 160 70 Z" fill="#FFFFFF"/>
+    <!-- a -->
+    <path d="M255 170 C230 170, 210 190, 210 215 L210 300 C210 320, 225 330, 245 330 L285 330 C305 330, 320 320, 320 300 L320 170 Z M275 210 L275 295 C265 295, 255 290, 255 275 L255 225 C255 215, 265 210, 275 210 Z" fill="#FFFFFF"/>
+    <!-- t -->
+    <path d="M350 110 L350 165 L325 165 L325 200 L350 200 L350 290 C350 315, 365 330, 395 330 L420 330 L420 295 L400 295 C392 295, 388 290, 388 280 L388 200 L420 200 L420 165 L388 165 L388 110 Z" fill="#FFFFFF"/>
+    <!-- X with iconic ribbon loops -->
+    <path d="M440 170 C470 170, 520 230, 560 280 L620 330 L670 330 L590 250 C560 220, 540 195, 540 170 Z" fill="#FFFFFF"/>
+    <path d="M670 170 L620 170 L520 260 C475 300, 445 330, 440 330 L480 330 C510 330, 550 290, 580 250 Z" fill="#FFFFFF"/>
+    <path d="M440 170 L480 170 C510 170, 550 210, 580 250 L500 330 L440 330 C470 330, 520 270, 560 220 Z" fill="#FFFFFF"/>
+    <!-- Trademark symbol (R) -->
+    <circle cx="685" cy="155" r="16" stroke="#FFFFFF" stroke-width="3" fill="none"/>
+    <text x="680" y="161" fill="#FFFFFF" font-size="16" font-family="Arial" font-weight="bold" text-anchor="middle">R</text>
+  </g>
+</svg>

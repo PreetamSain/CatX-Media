@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en" class="is-smooth is-desktop">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#8000FF">
+  <meta name="description" content="CatX Media — Brand & Digital Design Studio based in Jaipur, India. Crafting iconic brand identities, digital products, 3D CGI motion, and high-performance visual systems since 2018.">
+  <meta name="robots" content="index, follow">
+  
+  <meta property="og:title" content="CatX Media — Brand & Digital Design Studio">
+  <meta property="og:description" content="Crafting visual culture through high-impact brand identities, UI/UX platforms, and 3D motion experiences.">
+  <meta property="og:image" content="/images/catx-logo.png">
+  <meta property="og:type" content="website">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@catx.media">
+  <meta name="twitter:title" content="CatX Media — Brand & Digital Design Studio">
+  <meta name="twitter:description" content="Brand & Digital Design Studio based in Jaipur, India.">
+  <meta name="twitter:image:src" content="/images/catx-logo.png">
+  
+  <title>CatX Media — Brand & Digital Design Studio</title>
+  
+  <link rel="icon" type="image/png" href="/images/catx-logo.png">
+  <link rel="apple-touch-icon" href="/images/catx-logo.png">
+</head>
+<body>
+
+  <!-- Studio Boot Preloader (K95 / Juri Style) -->
+  <div class="boot-loader" aria-hidden="true">
+    <div class="boot-loader__content">
+      <div class="boot-loader__logo-wrap">
+        <img src="/images/catx-logo.png" alt="CatX Media" class="boot-loader__logo">
+      </div>
+      <div class="boot-loader__counter">[00%]</div>
+    </div>
+  </div>
+
+  <!-- Dynamic Project Tooltip Pill (K95 Style attached to Cursor) -->
+  <div class="project-label" data-nosnippet>
+    <div class="project-label__pill project-label__pill--project">
+      <svg class="project-label__arrow" width="12" height="12" viewBox="0 0 12 12" fill="none">
+        <path d="M2 10L10 2M10 2H4M10 2V8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="project-label__text">
+        <span class="project-label__title">Brand Identity</span>
+      </div>
+    </div>
+    <div class="visible project-label__pill project-label__pill--cue">
+      <span class="project-label__cue">DRAG TO EXPLORE</span>
+    </div>
+  </div>
+
+  <!-- Dual Header Navbar (Studio K95 Style with Character Roll-Overs) -->
+  <header class="nav nav--no-blend">
+    <div class="nav__logo" data-nosnippet>
+      <a href="/" class="is-logo">
+        <img src="/images/catx-logo.png" alt="CatX Media" class="nav__logo-img">
+        <span class="nav__brand-name">CatX<span class="nav__registered">®</span></span>
+      </a>
+    </div>
+
+    <!-- Interactive Top 3D Mode Switcher (K95 Style: Rings / Spiral) -->
+    <div class="layout-switch">
+      <span class="layout-switch__pill" aria-hidden="true"></span>
+      <button type="button" id="mode-rings" class="is-active layout-switch__btn">Rings</button>
+      <button type="button" id="mode-spiral" class="layout-switch__btn">Spiral</button>
+    </div>
+
+    <ul class="nav__links" data-nosnippet>
+      <li>
+        <a href="#works" class="nav__link">
+          <span class="nav__link-dot"></span>
+          <span class="nav__link-text">Works</span>
+        </a>
+      </li>
+      <li>
+        <a href="#services" class="nav__link">
+          <span class="nav__link-dot"></span>
+          <span class="nav__link-text">Services</span>
+        </a>
+      </li>
+      <li>
+        <a href="#about" class="nav__link">
+          <span class="nav__link-dot"></span>
+          <span class="nav__link-text">Studio</span>
+        </a>
+      </li>
+      <li>
+        <a href="#contact" class="nav__link nav-cta-pill">
+          <span class="nav__link-text">Contact ↗</span>
+        </a>
+      </li>
+    </ul>
+
+    <button class="nav__menu-btn" aria-label="Toggle navigation">
+      <span>Menu</span>
+    </button>
+  </header>
+
+  <!-- Fullscreen Mobile Menu Overlay -->
+  <div class="mobile-menu">
+    <div class="mobile-menu__close">Close [✕]</div>
+    <div style="margin-bottom: 20px;">
+      <img src="/images/catx-logo.png" alt="CatX Media" style="width: 76px; height: 76px; border-radius: 50%; box-shadow: 0 0 24px var(--accent);">
+    </div>
+    <ul>
+      <li><a href="#works">Selected Works</a></li>
+      <li><a href="#services">Capabilities</a></li>
+      <li><a href="#about">About Studio</a></li>
+      <li><a href="https://www.behance.net/catxmedia" target="_blank" rel="noopener">Behance Portfolio ↗</a></li>
+      <li><a href="https://www.instagram.com/catx.media/" target="_blank" rel="noopener">Instagram (@catx.media) ↗</a></li>
+      <li><a href="mailto:contact@catx.media" class="menu-highlight">Start a Project ↗</a></li>
+    </ul>
+    <div class="mobile-menu__footer">
+      <p>Jaipur, Rajasthan, India • Est. 2018</p>
+    </div>
+  </div>
+
+  <!-- Main Content Page -->
+  <main class="page">
+    
+    <!-- 1. Hero 3D WebGL Studio Section -->
+    <section class="index__section hero-studio-section">
+      <!-- 3D Three.js Interactive Orbit Canvas -->
+      <div class="studio-webgl-canvas"></div>
+
+      <!-- Center Brand Glyph & Tagline -->
+      <div class="hero__center-content">
+        <h1 class="hero__main-brand">CatX<span class="hero__registered">®</span></h1>
+        <p class="hero__tagline">Brand &amp; Digital Design Studio • Jaipur, India</p>
+      </div>
+
+      <!-- Footer Bar inside Hero (K95 Style: 12/20 Selected Works) -->
+      <div class="home-footer">
+        <span class="home-footer__item">
+          <span>BRAND &amp; DIGITAL DESIGN STUDIO</span>
+        </span>
+        <span class="home-footer__center">
+          <span>12 / 20 Selected Works &nbsp;•&nbsp; <a href="#works" class="home-footer__link">Explore All ↓</a></span>
+        </span>
+        <span class="home-footer__item">
+          <span>EST. 2018</span>
+        </span>
+      </div>
+    </section>
+
+    <!-- 2. Kinetic Master Title Section -->
+    <section class="index__section intro-kinetic">
+      <div class="page__padding">
+        <h2 class="title title--massive">
+          <div class="kinetic-mask"><span class="kinetic-line">Crafting</span></div>
+          <div class="kinetic-mask"><span class="kinetic-line title-highlight">Visual</span></div>
+          <div class="kinetic-mask"><span class="kinetic-line">Culture.</span></div>
+        </h2>
+        <div class="intro__subtext">
+          <span>EST. 2018 IN JAIPUR, INDIA &nbsp;•&nbsp; BRANDING &nbsp;•&nbsp; UI/UX &nbsp;•&nbsp; 3D CGI MOTION &nbsp;•&nbsp; DIGITAL PRODUCTS</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Word-by-word Reveal About Studio -->
+    <section id="about" class="index__section about --min-height-unset">
+      <div class="page__padding">
+        <div class="section__label"><span>ABOUT THE STUDIO</span></div>
+        <div class="paragraph">
+          <span class="word"><span class="word__inner">We</span></span>
+          <span class="word"><span class="word__inner">are</span></span>
+          <span class="word brand-word"><span class="word__inner">CatX</span></span>
+          <span class="word brand-word"><span class="word__inner">Media,</span></span>
+          <span class="word"><span class="word__inner">an</span></span>
+          <span class="word"><span class="word__inner">independent</span></span>
+          <span class="word"><span class="word__inner">design</span></span>
+          <span class="word"><span class="word__inner">studio</span></span>
+          <span class="word"><span class="word__inner">turning</span></span>
+          <span class="word"><span class="word__inner">bold</span></span>
+          <span class="word"><span class="word__inner">visions</span></span>
+          <span class="word"><span class="word__inner">into</span></span>
+          <span class="word"><span class="word__inner">iconic</span></span>
+          <span class="word"><span class="word__inner">brand</span></span>
+          <span class="word"><span class="word__inner">identities,</span></span>
+          <span class="word"><span class="word__inner">digital</span></span>
+          <span class="word"><span class="word__inner">products,</span></span>
+          <span class="word"><span class="word__inner">and</span></span>
+          <span class="word"><span class="word__inner">3D</span></span>
+          <span class="word"><span class="word__inner">motion</span></span>
+          <span class="word"><span class="word__inner">systems</span></span>
+          <span class="word"><span class="word__inner">that</span></span>
+          <span class="word"><span class="word__inner">scale</span></span>
+          <span class="word"><span class="word__inner">globally.</span></span>
+        </div>
+
+        <!-- Studio Metrics Grid -->
+        <div class="about__stats">
+          <div class="stat__card">
+            <span class="stat__num">150+</span>
+            <span class="stat__text">Projects Delivered</span>
+          </div>
+          <div class="stat__card">
+            <span class="stat__num">2018</span>
+            <span class="stat__text">Established in Jaipur</span>
+          </div>
+          <div class="stat__card">
+            <span class="stat__num">100%</span>
+            <span class="stat__text">Creative Precision</span>
+          </div>
+          <div class="stat__card">
+            <span class="stat__num">40+</span>
+            <span class="stat__text">Global &amp; Local Clients</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Interactive Works Showcase Cards -->
+    <section id="works" class="index__section projects">
+      <div class="projects__title">
+        <div class="projects__title__wrap">
+          <span class="title --xlarge --desktop">Selected Works &nbsp;<span>•</span>&nbsp; Featured Projects &nbsp;<span>•</span>&nbsp; Selected Works &nbsp;<span>•</span>&nbsp; Featured Projects &nbsp;<span>•</span>&nbsp;</span>
+          <span class="title --xlarge --mobile">Selected Works</span>
+        </div>
+      </div>
+
+      <div class="projects__content">
+        <div class="projects__grid">
+          <div class="projects__wrap">
+            
+            <!-- 1. Brand Identity & Systems -->
+            <a href="https://www.behance.net/catxmedia" target="_blank" rel="noopener" class="projects__item" data-index="0">
+              <div class="projects__item__asset u-abs">
+                <div class="projects__item__logo u-abs u-center">
+                  <img src="/images/catx-logo.png" alt="Brand Identity">
+                </div>
+                <div class="projects__item__loop u-abs js-loop is-active">
+                  <picture>
+                    <source srcset="/images/collections/86af7f.webp" type="image/webp">
+                    <img src="/images/collections/86af7f.webp" alt="Brand Identity Project" loading="lazy">
+                  </picture>
+                </div>
+                <div class="projects__item__loop u-abs js-loop">
+                  <picture>
+                    <source srcset="/images/collections/5f5c0b.webp" type="image/webp">
+                    <img src="/images/collections/5f5c0b.webp" alt="Brand Identity Project" loading="lazy">
+                  </picture>
+                </div>
+                <div class="projects__item__loop u-abs js-loop">
+                  <picture>
+                    <source srcset="/images/collections/9aecd5.webp" type="image/webp">
+                    <img src="/images/collections/9aecd5.webp" alt="Brand Identity Project" loading="lazy">
+                  </picture>
+                </div>
+                <div class="projects__item__loop u-abs js-loop">
+                  <picture>
+                    <source srcset="/images/collections/6f66fc.webp" type="image/webp">
+                    <img src="/images/collections/6f66fc.webp" alt="Brand Identity Project" loading="lazy">
+                  </picture>
+                </div>
+                <div class="projects__item__loop u-abs js-loop">
+                  <picture>
+                    <source srcset="/images/collections/2633fc.webp" type="image/webp">
+                    <img src="/images/collections/2633fc.webp" alt="Brand Identity Project" loading="lazy">
+                  </picture>
+                </div>
+              </div>
+              <div class="projects__item__label">
+                <div>
+                  <span>Brand Identity &amp; Systems</span>
+                  <span class="--desktop">View Case Study ↗</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- 2. UI/UX & Web Experiences -->
+            <a href="https://www.behance.net/catxmedia" target="_blank" rel="noopener" class="projects__item" data-index="1">
+              <div class="projects__item__asset u-abs">
+                <div class="projects__item__logo u-abs u-center">
+                  <img src="/images/catx-logo.png" alt="Digital Products">
+                </div>
+                <div class="projects__item__loop u-abs js-loop is-active">
+                  <picture>
+                    <source srcset="/images/collections/31b44e.webp" type="image/webp">
+                    <img src="/images/collections/31b44e.webp" alt="Digital Products" loading="lazy">
+                  </picture>
+                </div>
+                <div class="projects__item__loop u-abs js-loop">
+                  <picture>
+                    <source srcset="/images/collections/533811.webp" type="image/webp">
+                    <img src="/images/collections/533811.webp" alt="Digital Products" loading="lazy">
+                  </picture>
+                </div>
+                <div class="projects__item__loop u-abs js-loop">
+                  <picture>
+                    <source srcset="/images/collections/8ec9b3.webp" type="image/webp">
+                    <img src="/images/collections/8ec9b3.webp" alt="Digital Products" loading="lazy">
+                  </picture>
+                </div>
+                <div class="projects__item__loop u-abs js-loop">
+                  <picture>
+                    <source srcset="/images/collections/4ec2e5.webp" type="image/webp">
+                    <img src="/images/collections/4ec2e5.webp" alt="Digital Products" loading="lazy">
+                  </picture>
+                </div>
+              </div>
+              <div class="projects__item__label">
+                <div>
+                  <span>Digital Products &amp; Web</span>
+                  <span class="--desktop">View Case Study ↗</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- 3. 3D Motion & CGI -->
+            <a href="https://www.behance.net/catxmedia" target="_blank" rel="noopener" class="projects__item" data-index="2">
+              <div class="projects__item__asset u-abs">
+                <div class="projects__item__logo u-abs u-center">
+                  <img src="/images/catx-logo.png" alt="3D & Motion">
+                </div>
+                <div class="projects__item__loop u-abs js-loop is-active">
+                  <picture>
+                    <source srcset="/images/collections/7378a7.webp" type="image/webp">
+                    <img src="/images/collections/7378a7.webp" alt="3D Motion" loading="lazy">
+                  </picture>
+                </div>
+                <div class="projects__item__loop u-abs js-loop">
+                  <picture>
+                    <source srcset="/images/collections/905aba.webp" type="image/webp">
+                    <img src="/images/collections/905aba.webp" alt="3D Motion" loading="lazy">
+                  </picture>
+                </div>
+                <div class="projects__item__loop u-abs js-loop">
+                  <picture>
+                    <source srcset="/images/collections/3d848e.webp" type="image/webp">
+                    <img src="/images/collections/3d848e.webp" alt="3D Motion" loading="lazy">
+                  </picture>
+                </div>
+              </div>
+              <div class="projects__item__label">
+                <div>
+                  <span>3D Motion &amp; Art Direction</span>
+                  <span class="--desktop">View Case Study ↗</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- 4. Visual Content & Campaigns -->
+            <a href="https://www.behance.net/catxmedia" target="_blank" rel="noopener" class="projects__item" data-index="3">
+              <div class="projects__item__asset u-abs">
+                <div class="projects__item__logo u-abs u-center">
+                  <img src="/images/catx-logo.png" alt="Creative Direction">
+                </div>
+                <div class="projects__item__loop u-abs js-loop is-active">
+                  <picture>
+                    <source srcset="/images/collections/63629e.webp" type="image/webp">
+                    <img src="/images/collections/63629e.webp" alt="Campaigns" loading="lazy">
+                  </picture>
+                </div>
+                <div class="projects__item__loop u-abs js-loop">
+                  <picture>
+                    <source srcset="/images/collections/b25ce2.webp" type="image/webp">
+                    <img src="/images/collections/b25ce2.webp" alt="Campaigns" loading="lazy">
+                  </picture>
+                </div>
+                <div class="projects__item__loop u-abs js-loop">
+                  <picture>
+                    <source srcset="/images/collections/667502.webp" type="image/webp">
+                    <img src="/images/collections/667502.webp" alt="Campaigns" loading="lazy">
+                  </picture>
+                </div>
+              </div>
+              <div class="projects__item__label">
+                <div>
+                  <span>Campaigns &amp; Packaging</span>
+                  <span class="--desktop">View Case Study ↗</span>
+                </div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Core Ethos Section with Video Popover -->
+    <section id="services" class="index__section --min-height-unset apecoin">
+      <div class="page__padding">
+        <div class="section__label"><span>STUDIO PHILOSOPHY</span></div>
+        <h2 class="title title--large">
+          WE RUN ON 
+          <u>Creativity
+            <div class="hover">
+              <video src="/videos/wen.mp4" loop muted autoplay playsinline></video>
+            </div>
+          </u> &amp; Vision.
+        </h2>
+        <div class="paragraph">
+          Every project at CatX Media is fueled by obsessive craft, contemporary aesthetics, and deep strategic thinking. From Jaipur to global brands, we build visual systems that leave an unforgettable mark.
+        </div>
+        <div class="apecoin__button">
+          <a href="https://www.behance.net/catxmedia" target="_blank" rel="noopener" class="rounded">
+            <span>Explore Behance Showcase ↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Let's Create / Contact Section -->
+    <section id="contact" class="index__section index__footer">
+      <div class="page__padding">
+        <div class="index__footer__join u-center">
+          <div class="index__footer__join__line">
+            <span class="title title--large">Let's Create</span>
+          </div>
+          <div class="index__footer__join__line">
+            <p class="join__subtitle">Have a vision for your brand? Let’s collaborate and build something extraordinary together.</p>
+          </div>
+          <div class="index__footer__join__line">
+            <div class="index__footer__buttons">
+              <a href="mailto:contact@catx.media" class="rounded">
+                <span>Start a Project with CatX ↗</span>
+              </a>
+              <a href="https://www.instagram.com/catx.media/" target="_blank" rel="noopener" class="rounded --outline">
+                <span>DM us on Instagram</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Studio Capabilities Directory (Light Luxury Footer) -->
+    <footer class="collections --light">
+      <div class="page__padding">
+        <h3 class="collection_header">Studio Capabilities &amp; Services</h3>
+        <div class="collections__grid">
+          
+          <div class="collection_grid">
+            <h4>Brand Identity</h4>
+            <ul>
+              <li><p>Brand Strategy &amp; Positioning</p></li>
+              <li><p>Logo Design &amp; Visual Systems</p></li>
+              <li><p>Typography &amp; Design Tokens</p></li>
+              <li><p>Comprehensive Brand Guidelines</p></li>
+              <li><p>Packaging &amp; Merchandise Design</p></li>
+            </ul>
+          </div>
+
+          <div class="collection_grid">
+            <h4>Digital &amp; Web</h4>
+            <ul>
+              <li><p>UI/UX Product Architecture</p></li>
+              <li><p>High-End WebGL / 3D Websites</p></li>
+              <li><p>Design Systems for Scale</p></li>
+              <li><p>Interactive Web &amp; App Prototypes</p></li>
+              <li><p>Digital Product Design</p></li>
+            </ul>
+          </div>
+
+          <div class="collection_grid">
+            <h4>3D &amp; Motion</h4>
+            <ul>
+              <li><p>3D Product &amp; Space Rendering</p></li>
+              <li><p>Kinetic Motion Graphics</p></li>
+              <li><p>Commercial Video &amp; Reels Editing</p></li>
+              <li><p>Social Media Visual Campaigns</p></li>
+              <li><p>Creative Direction &amp; Storyboarding</p></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+    <!-- Main Light Footer Links -->
+    <footer class="index__section --min-height-unset footer --light">
+      <div class="page__padding">
+        <div class="footer__grid">
+          <ul>
+            <li><strong>CatX Media</strong></li>
+            <li><span>Jaipur, Rajasthan, India</span></li>
+            <li><span>Est. 2018</span></li>
+          </ul>
+          <ul>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+          <ul>
+            <li><a href="https://www.behance.net/catxmedia" target="_blank" rel="noopener">Behance Portfolio ↗</a></li>
+            <li><a href="https://www.instagram.com/catx.media/" target="_blank" rel="noopener">Instagram (@catx.media) ↗</a></li>
+            <li><a href="mailto:contact@catx.media">contact@catx.media</a></li>
+          </ul>
+        </div>
+        <div class="footer__bottom">
+          <p>© 2026 CatX Media. All rights reserved.</p>
+          <p>Jaipur, India • Crafted for visual excellence.</p>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

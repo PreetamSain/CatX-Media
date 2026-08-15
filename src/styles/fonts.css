@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'AK Monument Grotesk';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url('/fonts/ABCMonumentGrotesk-Regular.woff2') format('woff2'),
+       url('/fonts/ABCMonumentGrotesk-Regular.woff') format('woff'),
+       url('/fonts/ABCMonumentGrotesk-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'AK Monument Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/ABCMonumentGrotesk-Medium.woff2') format('woff2'),
+       url('/fonts/ABCMonumentGrotesk-Medium.woff') format('woff'),
+       url('/fonts/ABCMonumentGrotesk-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'AK Monument Grotesk';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/fonts/ABCMonumentGrotesk-Bold.woff2') format('woff2'),
+       url('/fonts/ABCMonumentGrotesk-Bold.woff') format('woff'),
+       url('/fonts/ABCMonumentGrotesk-Bold.otf') format('opentype');
+}

@@ -1,0 +1,42 @@
+
+/* CatX Media Electric Purple Design System */
+:root {
+  --color: #ffffff;
+  --background: #06020a;
+  --color-invert: #000000;
+  --background-invert: #ffffff;
+  --accent: #8000FF;
+  --accent-glow: #9E2BFF;
+  --accent-light: #B86BFF;
+  --accent-gradient: linear-gradient(135deg, #8000FF 0%, #B86BFF 100%);
+}
+
+::selection {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+body {
+  background-color: #06020a !important;
+  color: #ffffff;
+}
+
+.header__el.--white {
+  background: rgba(6, 2, 10, 0.45) !important;
+  border-bottom: 1px solid rgba(128, 0, 255, 0.12) !important;
+}
+
+.header .logo img {
+  border-radius: 50%;
+  box-shadow: 0 0 16px rgba(128, 0, 255, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header .logo:hover img {
+  transform: scale(1.08) rotate(5deg);
+  box-shadow: 0 0 24px rgba(158, 43, 255, 0.8);
+}
+
+a:hover {
+  color: var(--accent-light) !important;
+}
